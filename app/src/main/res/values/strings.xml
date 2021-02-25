@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">RecyclerView with CardView</string>
+    <string name="previous"><strike>$219.00</strike></string>
+    <string name="description">A set of high-quality and extremely challenging strength rubber bands
+        The set comes with rubber bands in 3 levels of difficulty - pink (light grade),
+        gray (medium grade), black (hard grade) The rubber bands are made of a special fabric
+        and with a non-slip grip on the body. The rubber bands are intended for lower body training,
+        buttocks and thighs Stock is limited.
+      </string>
+    <string name="description_or_title_product">Description or Title product</string>
+    <string name="add_to_cart">Add to cart</string>
+
+
+</resources>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF0F6"
+    android:paddingStart="5dp"
+    android:paddingTop="8dp"
+    android:paddingEnd="5dp"
+    android:paddingBottom="5dp">
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="29dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_pink_back" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="Fitmama"
+        android:textColor="#E67FBD"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textStore"
+        app:layout_constraintStart_toEndOf="@id/back"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/textStore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="Store"
+        android:textColor="#E67FBD"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/addWhite"
+        app:layout_constraintStart_toEndOf="@+id/back"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/basketCounter"
+        android:layout_width="20dp"
+        android:layout_height="18dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginTop="12dp"
+        android:text="2"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:background="@drawable/counter_basket"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/basket"
+        android:layout_width="26dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="7dp"
+        android:src="@drawable/ic_pink_basket"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </ImageView>
+
+
+    <LinearLayout
+        android:id="@+id/addWhite"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:background="@drawable/white_background"
+        android:paddingStart="25dp"
+        android:paddingEnd="25dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textStore">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="3"
+            tools:listitem="@layout/recycler_item" />
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
